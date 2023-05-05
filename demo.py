@@ -10,6 +10,6 @@ if uploaded_file is not None:
     classes = {1:'automobile', 2:'bird', 3:'cat', 4:'deer', 5:'dog', 6:'frog', 7:'horse', 8:'ship', 9:'truck'}
     image = Image.open(uploaded_file)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
-    clas = Cifar10_Prediction(image, 'weights/Tensorflow.h5', classes, (32, 32))
+    clas = Cifar10_Prediction(image, 'weights/Pytorch.h5', classes, (32, 32))
     st.header(f"Result: {clas.title()}")
 
